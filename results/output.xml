@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220514 08:37:09.474" rpa="false" schemaversion="3">
+<suite id="s1" name="BuildAndPrice" source="C:\Users\lenvov\OneDrive\Desktop\Automation\Testcases\BuildAndPrice.robot">
+<kw name="Launch Application Using" library="Functional" type="SETUP">
+<arg>chrome</arg>
+<doc>Keyword to launch Website</doc>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${Timeout}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220514 08:37:09.743" endtime="20220514 08:37:09.744"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220514 08:37:09.745" level="INFO">Opening browser 'chrome' to base url 'https://www.lundboats.com/'.</msg>
+<status status="PASS" starttime="20220514 08:37:09.744" endtime="20220514 08:37:17.055"/>
+</kw>
+<kw name="Set Window Position" library="SeleniumLibrary">
+<arg>0</arg>
+<arg>0</arg>
+<doc>Sets window position using ``x`` and ``y`` coordinates.</doc>
+<status status="PASS" starttime="20220514 08:37:17.055" endtime="20220514 08:37:17.196"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1024</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220514 08:37:17.196" endtime="20220514 08:37:17.348"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${home_page_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220514 08:37:17.352" level="INFO">Page title is 'Lund Aluminum And Fiberglass Fishing Boats'.</msg>
+<status status="PASS" starttime="20220514 08:37:17.348" endtime="20220514 08:37:17.352"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220514 08:37:18.291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-150.png"&gt;&lt;img src="selenium-screenshot-150.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220514 08:37:17.352" endtime="20220514 08:37:18.291"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:09.743" endtime="20220514 08:37:18.291"/>
+</kw>
+<test id="s1-t1" name="Build And Price A Boat Should Be Successful" line="9">
+<kw name="Navigate To Home Page" library="Functional" type="SETUP">
+<doc>Keyword to Navigate to HomePage by Clicking on Logo</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_page_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:18.295" level="INFO">Clicking element 'xpath://a[@title='Lund Boats']'.</msg>
+<status status="PASS" starttime="20220514 08:37:18.295" endtime="20220514 08:37:20.853"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${home_page_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220514 08:37:20.880" level="INFO">Page title is 'Lund Aluminum And Fiberglass Fishing Boats'.</msg>
+<status status="PASS" starttime="20220514 08:37:20.854" endtime="20220514 08:37:20.880"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220514 08:37:21.960" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-151.png"&gt;&lt;img src="selenium-screenshot-151.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220514 08:37:20.881" endtime="20220514 08:37:21.960"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:18.295" endtime="20220514 08:37:21.960"/>
+</kw>
+<kw name="Navigate To Build And Price" library="Functional">
+<doc>Keyword to navigate to build and price</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${build_price_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:21.964" level="INFO">Clicking element 'xpath://a[text()='Build &amp; Price']'.</msg>
+<status status="PASS" starttime="20220514 08:37:21.964" endtime="20220514 08:37:25.219"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${build_page_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220514 08:37:25.245" level="INFO">Page title is 'Build Your Boat | Lund'.</msg>
+<status status="PASS" starttime="20220514 08:37:25.219" endtime="20220514 08:37:25.245"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220514 08:37:25.702" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-152.png"&gt;&lt;img src="selenium-screenshot-152.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220514 08:37:25.245" endtime="20220514 08:37:25.702"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:21.960" endtime="20220514 08:37:25.702"/>
+</kw>
+<kw name="Select a Model To Build" library="Functional">
+<arg>ALL BOATS</arg>
+<arg>Jon Boat</arg>
+<doc>Keyword to Select a Model by Category and Model Name</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()="${category}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:25.702" level="INFO">Clicking element 'xpath=//span[text()="ALL BOATS"]'.</msg>
+<status status="PASS" starttime="20220514 08:37:25.702" endtime="20220514 08:37:26.005"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,"active")]//h5[text()="${Model}"]/../following-sibling::div/a[text()="SELECT A MODEL"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:26.006" level="INFO">Clicking element 'xpath=//div[contains(@class,"active")]//h5[text()="Jon Boat"]/../following-sibling::div/a[text()="SELECT A MODEL"]'.</msg>
+<status status="PASS" starttime="20220514 08:37:26.005" endtime="20220514 08:37:26.312"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,"show")]//h4[text()="SELECT YOUR ${Model} MODEL:"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220514 08:37:26.313" endtime="20220514 08:37:26.434"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220514 08:37:26.760" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-153.png"&gt;&lt;img src="selenium-screenshot-153.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220514 08:37:26.436" endtime="20220514 08:37:26.760"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:25.702" endtime="20220514 08:37:26.761"/>
+</kw>
+<kw name="Build The Lund" library="Functional">
+<arg>1040 tiller</arg>
+<doc>Keyword to Click on Build a Model</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,"show")]//h5[@aria-label="${Sub Model}"]//following::a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:26.763" level="INFO">Clicking element 'xpath=//div[contains(@class,"show")]//h5[@aria-label="1040 tiller"]//following::a[1]'.</msg>
+<status status="PASS" starttime="20220514 08:37:26.763" endtime="20220514 08:37:31.212"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:26.762" endtime="20220514 08:37:31.212"/>
+</kw>
+<kw name="Boat Configuration Page Should Be Visible" library="Functional">
+<arg>1040 Jon Boat - Boat Configurator</arg>
+<doc>Keyword to verify Title of Boat Model Configuration Page</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${SubModel}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220514 08:37:31.244" level="INFO">Page title is '1040 Jon Boat - Boat Configurator'.</msg>
+<status status="PASS" starttime="20220514 08:37:31.213" endtime="20220514 08:37:31.244"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220514 08:37:31.857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-154.png"&gt;&lt;img src="selenium-screenshot-154.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220514 08:37:31.245" endtime="20220514 08:37:31.857"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:31.213" endtime="20220514 08:37:31.857"/>
+</kw>
+<kw name="Get Boat Base Price" library="Functional">
+<var>${BasePrice}</var>
+<doc>keyword to get Base price of the Boat Model under Configuration Page</doc>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>${BOAT PRICE LABEL}</arg>
+<arg>data-dnprice</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220514 08:37:31.889" level="INFO">${price} = 1194</msg>
+<status status="PASS" starttime="20220514 08:37:31.857" endtime="20220514 08:37:31.890"/>
+</kw>
+<msg timestamp="20220514 08:37:31.890" level="INFO">${BasePrice} = 1194</msg>
+<status status="PASS" starttime="20220514 08:37:31.857" endtime="20220514 08:37:31.890"/>
+</kw>
+<kw name="Configure a Boat" library="Functional">
+<var>${OptionPrice}</var>
+<arg>Default</arg>
+<arg>Default</arg>
+<arg>6.6 Gallon Portable Fuel Tank</arg>
+<doc>Keyword to Select Configuration Options</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NextButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:31.895" level="INFO">Clicking element 'xpath://div[@id='nxt']'.</msg>
+<status status="PASS" starttime="20220514 08:37:31.894" endtime="20220514 08:37:32.066"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NextButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:32.066" level="INFO">Clicking element 'xpath://div[@id='nxt']'.</msg>
+<status status="PASS" starttime="20220514 08:37:32.066" endtime="20220514 08:37:32.205"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath=//p[text()="${Options}"]/../label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:32.205" level="INFO">Clicking element 'Xpath=//p[text()="6.6 Gallon Portable Fuel Tank"]/../label'.</msg>
+<status status="PASS" starttime="20220514 08:37:32.205" endtime="20220514 08:37:32.536"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${OptionPrice}</var>
+<arg>xpath=//p[text()="${Options}"]/following-sibling::p</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:32.605" level="INFO">${OptionPrice} = $227</msg>
+<status status="PASS" starttime="20220514 08:37:32.536" endtime="20220514 08:37:32.605"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${OptionPrice}</var>
+<arg>${OptionPrice}</arg>
+<arg>$</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220514 08:37:32.607" level="INFO">${OptionPrice} = 227</msg>
+<status status="PASS" starttime="20220514 08:37:32.605" endtime="20220514 08:37:32.607"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${OptionPrice}</var>
+<arg>${OptionPrice}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20220514 08:37:32.607" level="INFO">${OptionPrice} = 227.0</msg>
+<status status="PASS" starttime="20220514 08:37:32.607" endtime="20220514 08:37:32.607"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Next Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:32.607" level="INFO">Clicking element 'xpath://div[@id='nxt']'.</msg>
+<status status="PASS" starttime="20220514 08:37:32.607" endtime="20220514 08:37:32.798"/>
+</kw>
+<msg timestamp="20220514 08:37:32.798" level="INFO">${OptionPrice} = 227.0</msg>
+<status status="PASS" starttime="20220514 08:37:31.893" endtime="20220514 08:37:32.798"/>
+</kw>
+<kw name="View Build Summary For Zip" library="Functional">
+<arg>60007</arg>
+<doc>Keyword to view Build Summary for a Zip code</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ViewSummaryButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220514 08:37:32.801" endtime="20220514 08:37:33.135"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ViewSummaryZipText}</arg>
+<arg>${Zip Code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:33.136" level="INFO">Typing text '60007' into text field 'xpath:(//input[@name='Zip'])[3]'.</msg>
+<status status="PASS" starttime="20220514 08:37:33.135" endtime="20220514 08:37:33.417"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ViewSummaryButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:33.417" level="INFO">Clicking element 'xpath://button[text()='View Summary']'.</msg>
+<status status="PASS" starttime="20220514 08:37:33.417" endtime="20220514 08:37:33.720"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${YourDealerLabel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220514 08:37:33.721" endtime="20220514 08:37:34.439"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220514 08:37:35.185" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-155.png"&gt;&lt;img src="selenium-screenshot-155.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220514 08:37:34.439" endtime="20220514 08:37:35.185"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:32.801" endtime="20220514 08:37:35.185"/>
+</kw>
+<kw name="Estimated Boat Price Should Be Base Price Plus Options Price" library="Functional">
+<arg>${BasePrice}</arg>
+<arg>${OptionPrice}</arg>
+<doc>Keyword to verify Estimated Price= Base Price+ Options</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${total_price_label}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220514 08:37:35.187" endtime="20220514 08:37:35.239"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TotalPrice}</var>
+<arg>${total_price_label}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220514 08:37:35.263" level="INFO">${TotalPrice} = $1,421*</msg>
+<status status="PASS" starttime="20220514 08:37:35.239" endtime="20220514 08:37:35.263"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TotalPrice}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220514 08:37:35.263" level="INFO">$1,421*</msg>
+<status status="PASS" starttime="20220514 08:37:35.263" endtime="20220514 08:37:35.263"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${TotalPrice}</var>
+<arg>${TotalPrice}</arg>
+<arg>$</arg>
+<arg>*</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20220514 08:37:35.264" level="INFO">${TotalPrice} = 1421</msg>
+<status status="PASS" starttime="20220514 08:37:35.263" endtime="20220514 08:37:35.264"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TotalPrice}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220514 08:37:35.264" level="INFO">1421</msg>
+<status status="PASS" starttime="20220514 08:37:35.264" endtime="20220514 08:37:35.264"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${TotalPrice}</var>
+<arg>${TotalPrice}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20220514 08:37:35.264" level="INFO">${TotalPrice} = 1421.0</msg>
+<status status="PASS" starttime="20220514 08:37:35.264" endtime="20220514 08:37:35.264"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${BasePrice}</var>
+<arg>${BasePrice}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20220514 08:37:35.264" level="INFO">${BasePrice} = 1194.0</msg>
+<status status="PASS" starttime="20220514 08:37:35.264" endtime="20220514 08:37:35.264"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TotalPrice}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220514 08:37:35.264" level="INFO">1421.0</msg>
+<status status="PASS" starttime="20220514 08:37:35.264" endtime="20220514 08:37:35.264"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${BasePrice}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220514 08:37:35.264" level="INFO">1194.0</msg>
+<status status="PASS" starttime="20220514 08:37:35.264" endtime="20220514 08:37:35.264"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${OptionPrice}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220514 08:37:35.264" level="INFO">227.0</msg>
+<status status="PASS" starttime="20220514 08:37:35.264" endtime="20220514 08:37:35.264"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${ExpectedPrice}</var>
+<arg>${BasePrice}+${OptionPrice}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220514 08:37:35.272" level="INFO">${ExpectedPrice} = 1421.0</msg>
+<status status="PASS" starttime="20220514 08:37:35.272" endtime="20220514 08:37:35.272"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${ExpectedPrice}</arg>
+<arg>${TotalPrice}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20220514 08:37:35.272" endtime="20220514 08:37:35.273"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220514 08:37:36.003" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-156.png"&gt;&lt;img src="selenium-screenshot-156.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220514 08:37:35.273" endtime="20220514 08:37:36.003"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:35.186" endtime="20220514 08:37:36.003"/>
+</kw>
+<doc>Test case to Verify Successful Configuration and Pricing</doc>
+<tag>Build</tag>
+<tag>Functional</tag>
+<tag>Regression</tag>
+<status status="PASS" starttime="20220514 08:37:18.291" endtime="20220514 08:37:36.003"/>
+</test>
+<kw name="Close Application" library="Functional" type="TEARDOWN">
+<doc>Keyword to Close all browsers</doc>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220514 08:37:36.006" endtime="20220514 08:37:38.375"/>
+</kw>
+<status status="PASS" starttime="20220514 08:37:36.006" endtime="20220514 08:37:38.376"/>
+</kw>
+<doc>Test Suite For Build/Configuration and Pricing</doc>
+<status status="PASS" starttime="20220514 08:37:09.478" endtime="20220514 08:37:38.376"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Build</stat>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BuildAndPrice">BuildAndPrice</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220514 08:37:09.500" level="ERROR">Error in file 'C:\Users\lenvov\OneDrive\Desktop\Automation\Resources\Functional.robot' on line 2: Non-existing setting '[Documentation]'. Did you mean:
+    Documentation</msg>
+<msg timestamp="20220514 08:37:09.508" level="ERROR">Error in file 'C:\Users\lenvov\OneDrive\Desktop\Automation\Resources\Functional.robot' on line 84: Creating keyword 'Navigate to Model Overview' failed: Invalid argument specification: Invalid argument syntax '{Model}'.</msg>
+<msg timestamp="20220514 08:37:09.733" level="ERROR">Error in file 'C:\Users\lenvov\OneDrive\Desktop\Automation\Resources\Functional.robot' on line 6: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+</errors>
+</robot>
