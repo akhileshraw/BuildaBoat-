@@ -5,7 +5,7 @@ Library    Collections
 Library    String
 #Boot
 *** Variables ***
-${Timeout}    120 Secs
+${Timeout}    150 Secs
 ${url}    https://www.lundboats.com/
 ${home_page_title}    Lund Aluminum And Fiberglass Fishing Boats
 ${home_page_link}     xpath://a[@title='Lund Boats']
